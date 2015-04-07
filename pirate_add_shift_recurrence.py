@@ -2,7 +2,7 @@
 
 import sys
 import os
-from tasklib.task import Task, TaskWarrior
+from tasklib.task import TaskWarrior
 
 time_attributes = ('wait', 'until', 'scheduled')
 
