@@ -4,7 +4,7 @@ import sys
 import os
 from tasklib.task import TaskWarrior
 
-time_attributes = ('wait', 'until', 'scheduled')
+time_attributes = ('wait', 'scheduled')
 
 def is_new_local_recurrence_child_task(task):
     # Do not affect tasks not spun by recurrence
