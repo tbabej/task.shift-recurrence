@@ -2,7 +2,7 @@
 
 import sys
 import os
-from tasklib.task import TaskWarrior
+from tasklib import TaskWarrior
 
 time_attributes = ('wait', 'scheduled')
 
@@ -18,7 +18,7 @@ def is_new_local_recurrence_child_task(task):
         return True
 
 tw = TaskWarrior(data_location=os.path.dirname(os.path.dirname(sys.argv[0])))
-tw.config.update(dict(recurrence="no"))
+tw.overrides.update(dict(recurrence="no", hooks="no"))
 
 def hook_shift_recurrence(task):
     if is_new_local_recurrence_child_task(task):
