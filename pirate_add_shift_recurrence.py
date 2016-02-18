@@ -22,7 +22,7 @@ tw.overrides.update(dict(recurrence="no", hooks="no"))
 
 def hook_shift_recurrence(task):
     if is_new_local_recurrence_child_task(task):
-        parent = tw.tasks.get(uuid=task['parent'])
+        parent = tw.tasks.get(uuid=task['parent']['uuid'])
         parent_due_shift = task['due'] - parent['due']
         for attr in time_attributes:
             if parent[attr]:
